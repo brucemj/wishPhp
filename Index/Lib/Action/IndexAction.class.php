@@ -6,4 +6,10 @@ class IndexAction extends Action {
 		//p(__PUBLIC__);
 		$this -> display();
     }
+    
+    public function test(){
+    	//echo U('wish');
+    	//p(__PUBLIC__);
+    	$this -> display();
+    }
 }

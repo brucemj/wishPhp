@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<meta charset="gb2312">
+<link rel="shortcut icon" href="http://see.xidian.edu.cn/cpp/favicon.ico">
+<title>C语言中文网：c语言程序设计门户网站(入门教程、编程软件)</title>
+<meta name="description" content="C语言中文网是中国领先的C语言程序设计专业网站，提供C语言入门经典教程、C语言编译器、C语言函数手册，C语言编程技巧，C语言考试试题等，是学习、自学C语言程序设计的好帮手。">
+<link href="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/index.css" rel="stylesheet" media="screen" type="text/css">
+</head>
+<body>
+<div id="topbar-wrap" class="clearfix">
+	<div id="topbar">
+		<ul id="nav-top" class="left clearfix hover-none">
+			<li><a class="this" href="http://see.xidian.edu.cn/cpp/">C语言</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen/">C++教程</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/danpianji/">单片机</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/shell/">Shell</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/u/mysql/">MySQL</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/Swift/">Swift</a></li>
+			<li><a class="col-red ad" href="http://see.xidian.edu.cn/cpp/html/2751.html" target="_blank">C语言中文网天使用户交流群</a></li>
+		</ul>
+		<ul id="interact-link" class="right hover-none">
+			<li class="weibo">
+				<a href="http://weibo.com/cyuyanzhongwenwang" target="_blank">新浪微博</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="header_wrap" class="clearfix">
+	<div id="header" class="hover-none">
+		<a id="logo" class="left" href="http://see.xidian.edu.cn/cpp/"><img src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/logo_c.jpg" alt="C语言中文网"></a>
+		<ul id="nav-main" class="left clearfix">
+			<li><a href="http://see.xidian.edu.cn/cpp/">首页</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/u/jiaocheng/">入门教程</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/u/shipin/">视频教程</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/u/xitong/">操作系统</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/u/ziliao/">资料下载</a></li>
+			<li><a href="http://see.xidian.edu.cn/cpp/u/zhuanti/">专题列表</a></li>
+			<li class="sub-menu">更多<span class="icon">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<ul>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/hanshu/">函数手册</a></li>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/cjinjie/">进阶教程</a></li>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/shuju/">数据结构</a></li>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/vc60/">VC6.0教程</a></li>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/erji/">二级C语言</a></li>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/window/">Windows编程</a></li>
+					<li><a href="http://see.xidian.edu.cn/cpp/u/wenti/">C语言常见问题</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="main" class="clearfix">
+	
+	<div id="part-top" class="clearfix">
+		<div id="top-left" class="left">
+			<dl class="list host-software hover-none">
+				<dt>热门软件</dt>
+				<dd class="clearfix">
+					<a class="left icon" href="http://see.xidian.edu.cn/cpp/html/1117.html" target="_blank">
+						<img src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/icon_visual_cpp.jpg" alt="VC6.0中英文版下载">
+					</a>
+					<p class="left info">
+						<a href="http://see.xidian.edu.cn/cpp/html/1117.html" target="_blank">VC6.0中英文版下载</a><br>
+						<span>支持Win7和XP</span>
+					</p>
+					<span class="right time">2013-12-20</span>
+				</dd>
+				<dd class="clearfix">
+					<a class="left icon" href="http://see.xidian.edu.cn/cpp/html/2382.html" target="_blank">
+						<img src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/icon_c_free.jpg" alt="C-Free5.0下载">
+					</a>
+					<p class="left info">
+						<a href="http://see.xidian.edu.cn/cpp/html/2382.html" target="_blank">C-Free5.0中文版下载</a><br>
+						<span>小巧灵活的C语言IED</span>
+					</p>
+					<span class="right time">2013-12-20</span>
+				</dd>
+				<dd class="clearfix">
+					<a class="left icon" href="http://see.xidian.edu.cn/cpp/html/2295.html" target="_blank">
+						<img src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/icon_dev_cpp.jpg" alt="Dev C++ 5.6.3下载">
+					</a>
+					<p class="left info">
+						<a href="http://see.xidian.edu.cn/cpp/html/2295.html" target="_blank">Dev C++ 5.6.3下载</a><br>
+						<span>中文最新版</span>
+					</p>
+					<span class="right time">2014-06-08</span>
+				</dd>
+				<dd class="clearfix">
+					<a class="left icon" href="http://see.xidian.edu.cn/cpp/html/2287.html" target="_blank">
+						<img src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/icon_xcode.jpg" alt="Xcode 6 Beta下载">
+					</a>
+					<p class="left info">
+						<a href="http://see.xidian.edu.cn/cpp/html/2287.html" target="_blank">Xcode 6 Beta下载</a><br>
+						<span>支持Swift语言</span>
+					</p>
+					<span class="right time">2014-06-06</span>
+				</dd>
+				<dd class="clearfix">
+					<a class="left icon" href="http://see.xidian.edu.cn/cpp/html/2296.html" target="_blank">
+						<img src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/icon_os_x.jpg" alt="Xcode 6 Beta下载">
+					</a>
+					<p class="left info">
+						<a href="http://see.xidian.edu.cn/cpp/html/2296.html" target="_blank">VMware安装OS X</a><br>
+						<span>带Xcode 6 Beta安装</span>
+					</p>
+					<span class="right time">2014-06-06</span>
+				</dd>
+			</dl>
+			<!-- <a href="http://club.coderbbs.com/thread-2-1-1.html" target="_blank"><img width="300" src="/cpp/uploads/index/img_zhaomu.jpg" alt=""></a> -->
+		</div>
+		<dl class="list left arc-list hot-arc">
+			<dt>推荐文章 TOP20</dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1721.html" target="_blank" title="什么是编程语言">什么是编程语言</a>
+				<span class="right">07-14</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1484.html" target="_blank" title="MySql均衡负载">MySql均衡负载</a>
+				<span class="right">04-27</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1427.html" target="_blank" title="&lt;font color='#333333'&gt;正则表达式所有元字符及其使用方法一览表&lt;/font&gt;"><font color="#333333">正则表达式所有元字符及其使用方法一览表</font></a>
+				<span class="right">04-28</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1395.html" target="_blank" title="C语言之父Dennis Ritchie访谈：当年错失互联网大机遇">C语言之父Dennis Ritchie访谈：当年错失互联网大机遇</a>
+				<span class="right">04-24</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1391.html" target="_blank" title="网友热议12月编程榜 C语言经典地位深入人心">网友热议12月编程榜 C语言经典地位深入人心</a>
+				<span class="right">04-24</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1376.html" target="_blank" title="&lt;font color='#0033CC'&gt;2012年4月编程语言排行榜—C语言重归榜首&lt;/font&gt;"><font color="#0033CC">2012年4月编程语言排行榜—C语言重归榜首</font></a>
+				<span class="right">04-28</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1209.html" target="_blank" title="《C语言程序设计》各章重点与难点分析，同学们好好看一下">《C语言程序设计》各章重点与难点分析，同学们好好看一下</a>
+				<span class="right">04-18</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1193.html" target="_blank" title="C语言程序设计入门学习六步曲">C语言程序设计入门学习六步曲</a>
+				<span class="right">04-29</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1186.html" target="_blank" title="手把手教你如何优化C语言程序">手把手教你如何优化C语言程序</a>
+				<span class="right">04-17</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1140.html" target="_blank" title="&lt;font color='#006600'&gt;C语言编程时常犯十八个错误&lt;/font&gt;"><font color="#006600">C语言编程时常犯十八个错误</font></a>
+				<span class="right">04-28</span>
+			</dd>
+
+		</dl>
+		<div class="left" style="border-top: 3px solid #D33428;">
+			<div class="tab clearfix">
+				<ul class="title-list clearfix">
+					<li class="this" tabindex="1">最近更新</li>
+					<li tabindex="2">随机文章</li>
+				</ul>
+				<ul class="cont-list">
+					<li class="this" tabindex="1">
+						<ul>
+							<li><a href="http://see.xidian.edu.cn/cpp/html/2766.html" target="_blank" title="C-Free MSCL版下载">C-Free MSCL版下载</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2774.html" target="_blank" title="C++构造函数、explicit、类合成">C++构造函数、explicit、类合成</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2767.html" target="_blank" title="C++基类与派生类的构造函数">C++基类与派生类的构造函数</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2765.html" target="_blank" title="C++继承">C++继承</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2764.html" target="_blank" title="C++成员函数和运算符的重载">C++成员函数和运算符的重载</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2763.html" target="_blank" title="C++类与对象">C++类与对象</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2762.html" target="_blank" title="C++引用">C++引用</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2761.html" target="_blank" title="C++缺省参数和函数重载">C++缺省参数和函数重载</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2760.html" target="_blank" title="C++名字空间">C++名字空间</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/biancheng/view/2755.html" target="_blank" title="C++与C语言的区别">C++与C语言的区别</a></li>
+
+						</ul>
+					</li>
+					<li tabindex="2">
+						<ul>
+							<li><a href="http://see.xidian.edu.cn/cpp/html/1773.html" target="_blank" title="Eclipse最新下载地址【含中文包】">Eclipse最新下载地址【含中文包】</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1690.html" target="_blank" title="较长的变量名会影响程序的速度、大小或效率吗?">较长的变量名会影响程序的速度、大小或效率吗?</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1088.html" target="_blank" title="二、Windows自己的窗口—匈牙利表示法">二、Windows自己的窗口—匈牙利表示法</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/2254.html" target="_blank" title="Swift布尔类型">Swift布尔类型</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1194.html" target="_blank" title="爱因斯坦难题的Ｃ语言程序设计">爱因斯坦难题的Ｃ语言程序设计</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/579.html" target="_blank" title="计算机二级C语言上机真题（48）【附详解】">计算机二级C语言上机真题（48）【附详解】</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1621.html" target="_blank" title="为什么应该使用标准库函数而不要自己编写函数?">为什么应该使用标准库函数而不要自己编写函数?</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1434.html" target="_blank" title="正则表达式匹配日期时间">正则表达式匹配日期时间</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1395.html" target="_blank" title="C语言之父Dennis Ritchie访谈：当年错失互联网大机遇">C语言之父Dennis Ritchie访谈：当年错失互联网大机遇</a></li>
+<li><a href="http://see.xidian.edu.cn/cpp/html/1102.html" target="_blank" title="二、Windows文字绘制和更新">二、Windows文字绘制和更新</a></li>
+
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="ad-google" style="margin-top:15px;">
+				谷歌300_250广告
+			</div> -->
+		</div>
+	</div>
+	<div id="part-left" class="left">
+		<table class="course-contents">
+			<caption class="clearfix hover-none">
+				<a class="left title" href="http://see.xidian.edu.cn/cpp/u/jiaocheng/" target="_blank">C语言入门教程</a>
+				<a class="right more" href="http://see.xidian.edu.cn/cpp/u/jiaocheng/" target="_blank" title="C语言入门教程">查看更多&gt;&gt;</a>
+			</caption>
+			<tbody><tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c1/" target="_blank">C语言概述</a></td>
+				<!-- <td><a href="/cpp/u/c2/" target="_blank">C语言算法</a></td> -->
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c3/" target="_blank">数据和运算符</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c4/" target="_blank">顺序程序设计</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c5/" target="_blank">分支结构</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c6/" target="_blank">循环结构</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c7/" target="_blank">C语言数组</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c8/" target="_blank">C语言函数</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c9/" target="_blank">预处理命令</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c10/" target="_blank">C语言指针</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c11/" target="_blank">结构体和共用体</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c12/" target="_blank">位运算</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c13/" target="_blank">文件操作</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c14/" target="_blank">C语言常用算法</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c15/" target="_blank">输入输出流和缓冲区</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/u/c16/" target="_blank">C语言模块化开发</a></td>
+			</tr>
+		</tbody></table>
+		<table class="course-contents">
+			<caption class="clearfix hover-none">
+				<a class="left title" href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen/" target="_blank">C++入门教程</a>
+				<a class="right more" href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen/" target="_blank" title="C++入门教程">查看更多&gt;&gt;</a>
+			</caption>
+			<tbody><tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_1/" target="_blank">C++初步</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_2/" target="_blank">数据类型与表达式</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_3/" target="_blank">程序设计初步</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_4/" target="_blank">函数与预处理</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_5/" target="_blank">C++数组</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_6/" target="_blank">C++指针</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_7/" target="_blank">结构体|共用体|枚举</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_8/" target="_blank">C++类和对象</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_9/" target="_blank">类和对象[进阶]</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_10/" target="_blank">运算符重载</a></td>
+				
+			</tr>
+			<tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_11/" target="_blank">C++继承与派生</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_12/" target="_blank">多态性与虚函数</a></td>
+				<td colspan="3"><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen_13/" target="_blank">C++输入输出</a></td>
+			</tr>
+		</tbody></table>
+		<table class="course-contents">
+			<caption class="clearfix hover-none">
+				<a class="left title" href="http://see.xidian.edu.cn/cpp/danpianji/" target="_blank">单片机教程</a>
+				<a class="right more" href="http://see.xidian.edu.cn/cpp/danpianji/" target="_blank" title="单片机教程">查看更多&gt;&gt;</a>
+			</caption>
+			<tbody><tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_1/" target="_blank">如何学习单片机</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_2/" target="_blank">点亮你的LED灯</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_3/" target="_blank">硬件基础知识学习</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_4/" target="_blank">C语言基础及流水灯的实现</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_5/" target="_blank">定时器与数码管基础</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_6/" target="_blank">中断与数码管动态显示</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_7/" target="_blank">变量进阶与点阵LED</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_8/" target="_blank">函数进阶与按键</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_9/" target="_blank">步进电机与蜂鸣器</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_10/" target="_blank">实例练习与经验积累</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_11/" target="_blank">UART串口通信</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_12/" target="_blank">指针基础与1602液晶介绍</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_13/" target="_blank">1602液晶与串口的应用实例</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_14/" target="_blank">I2C总线与EEPROM</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_15/" target="_blank">实时时钟DS1302</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_16/" target="_blank">红外通信与DS18B20传感器</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_17/" target="_blank">模数转换与数模转换</a></td>
+				<td><a href="http://see.xidian.edu.cn/cpp/danpianji/rumen_18/" target="_blank">RS485通信与Modbus协议</a></td>
+			</tr>
+		</tbody></table>
+		<dl class="list left">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/jiaocheng/" target="_blank">C语言入门教程</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/3.html" target="_blank" title="C语言开发工具(编译器|IDE)推荐">C语言开发工具(编译器|IDE)推荐</a>
+				<span class="right">[08-30]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2759.html" target="_blank" title="在Linux下运行C语言程序">在Linux下运行C语言程序</a>
+				<span class="right">[08-30]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2711.html" target="_blank" title="在Windows下运行C语言程序">在Windows下运行C语言程序</a>
+				<span class="right">[08-30]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/83.html" target="_blank" title="C语言指针型函数">C语言指针型函数</a>
+				<span class="right">[08-15]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2750.html" target="_blank" title="动态链接库(dll)简介">动态链接库(dll)简介</a>
+				<span class="right">[08-07]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2749.html" target="_blank" title="第一个C语言多文件编译的例子：C语言多文件编程，10分钟快速上手">第一个C语言多文件编译的例子：C语言多文件编程，10分钟快速上手</a>
+				<span class="right">[08-07]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2753.html" target="_blank" title="第一个DLL程序：动态链接库DLL教程，30分钟快速上手">第一个DLL程序：动态链接库DLL教程，30分钟快速上手</a>
+				<span class="right">[08-07]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2754.html" target="_blank" title="动态链接库DLL的加载：隐式加载(载入时加载)和显式加载(运行时加">动态链接库DLL的加载：隐式加载(载入时加载)和显式加载(运行时加</a>
+				<span class="right">[08-07]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/95.html" target="_blank" title="C语言指向结构体数组的指针">C语言指向结构体数组的指针</a>
+				<span class="right">[02-26]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/93.html" target="_blank" title="C语言结构体数组的定义">C语言结构体数组的定义</a>
+				<span class="right">[02-26]</span>
+			</dd>
+
+		</dl>
+		<dl class="list right">
+			<dt><a href="http://see.xidian.edu.cn/cpp/biancheng/cpp/rumen/" target="_blank">C++教程</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2774.html" target="_blank" title="C++构造函数、explicit、类合成">C++构造函数、explicit、类合成</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2767.html" target="_blank" title="C++基类与派生类的构造函数">C++基类与派生类的构造函数</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2765.html" target="_blank" title="C++继承">C++继承</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2764.html" target="_blank" title="C++成员函数和运算符的重载">C++成员函数和运算符的重载</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2763.html" target="_blank" title="C++类与对象">C++类与对象</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2762.html" target="_blank" title="C++引用">C++引用</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2761.html" target="_blank" title="C++缺省参数和函数重载">C++缺省参数和函数重载</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/2760.html" target="_blank" title="C++名字空间">C++名字空间</a>
+				<span class="right">[08-31]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/44.html" target="_blank" title="C++二维数组讲解、二维数组的声明和初始化">C++二维数组讲解、二维数组的声明和初始化</a>
+				<span class="right">[05-06]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/biancheng/view/10.html" target="_blank" title="C++变量简介、什么是变量">C++变量简介、什么是变量</a>
+				<span class="right">[05-06]</span>
+			</dd>
+
+		</dl>
+
+		<dl class="list left">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/zhuanti/" target="_blank">C语言专题文章</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2241.html" target="_blank" title="VC6.0安装教程，解决win7兼容性问题">VC6.0安装教程，解决win7兼容性问题</a>
+				<span class="right">[06-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2444.html" target="_blank" title="VC6.0与office 2007不兼容、无法打开文件、无法向工程中添加文件">VC6.0与office 2007不兼容、无法打开文件、无法向工程中添加文件</a>
+				<span class="right">[06-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2448.html" target="_blank" title="VC6.0在XP下调试MFC多线程死机问题的解决方案">VC6.0在XP下调试MFC多线程死机问题的解决方案</a>
+				<span class="right">[06-18]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2447.html" target="_blank" title="VC6.0不能停止调试程序的解决方案">VC6.0不能停止调试程序的解决方案</a>
+				<span class="right">[06-18]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2446.html" target="_blank" title="VC6.0编译出错Compiling...,Error spawning cl.exe的解决方案">VC6.0编译出错Compiling...,Error spawning cl.exe的解决方案</a>
+				<span class="right">[06-18]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2445.html" target="_blank" title="以前安装过VC6.0，重新安装VC6.0后编译出错问题的解决方案">以前安装过VC6.0，重新安装VC6.0后编译出错问题的解决方案</a>
+				<span class="right">[06-18]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2423.html" target="_blank" title="C语言fopen()打开文本文件与二进制文件的区别">C语言fopen()打开文本文件与二进制文件的区别</a>
+				<span class="right">[06-16]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/740.html" target="_blank" title="对C语言程序进行调试的基本手段和方法">对C语言程序进行调试的基本手段和方法</a>
+				<span class="right">[03-06]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1598.html" target="_blank" title="C语言exit()和return有什么不同?">C语言exit()和return有什么不同?</a>
+				<span class="right">[05-05]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/764.html" target="_blank" title="华为C语言编程规范（6）—变量、结构">华为C语言编程规范（6）—变量、结构</a>
+				<span class="right">[04-25]</span>
+			</dd>
+
+		</dl>
+		<dl class="list right">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/wenti/" target="_blank">C语言常见问题</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/917.html" target="_blank" title="18.1 怎样从键盘直接读入字符而不用等RETURN键？">18.1 怎样从键盘直接读入字符而不用等RETURN键？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/868.html" target="_blank" title="9.1 C语言中布尔值的候选类型是什么？">9.1 C语言中布尔值的候选类型是什么？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/890.html" target="_blank" title="12.4怎样才能避免C语言的sprintf()目标缓冲区溢出？">12.4怎样才能避免C语言的sprintf()目标缓冲区溢出？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/891.html" target="_blank" title="12.5既然fflush()不能, 那么怎样才能清除输入呢？">12.5既然fflush()不能, 那么怎样才能清除输入呢？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/892.html" target="_blank" title="12.6怎样同时向两个地方输出,如同时输出到屏幕和文件？">12.6怎样同时向两个地方输出,如同时输出到屏幕和文件？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/902.html" target="_blank" title="14.1 float变量赋值3.1，printf的值为3.0999999，为什么">14.1 float变量赋值3.1，printf的值为3.0999999，为什么</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/904.html" target="_blank" title="14.3怎么验证对浮点数在“足够接近”情况下的等值？">14.3怎么验证对浮点数在“足够接近”情况下的等值？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/905.html" target="_blank" title="14.4怎样测试IEEE NaN以及其它特殊值？">14.4怎样测试IEEE NaN以及其它特殊值？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/877.html" target="_blank" title="10.8怎样写参数个数可变的宏？">10.8怎样写参数个数可变的宏？</a>
+				<span class="right">[02-20]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/917.html" target="_blank" title="18.1 怎样从键盘直接读入字符而不用等RETURN键？">18.1 怎样从键盘直接读入字符而不用等RETURN键？</a>
+				<span class="right">[04-20]</span>
+			</dd>
+
+		</dl>
+
+		<dl class="list left">
+			<dt><a href="http://see.xidian.edu.cn/cpp/swift/" target="_blank">Swift教程</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2269.html" target="_blank" title="Swift与Objective-C和Cocoa混合编程的基本设置">Swift与Objective-C和Cocoa混合编程的基本设置</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2452.html" target="_blank" title="在Swift中使用Cocoa数据类型">在Swift中使用Cocoa数据类型</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2441.html" target="_blank" title="Swift参数及泛型参数参考">Swift参数及泛型参数参考</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2440.html" target="_blank" title="Swift模式参考">Swift模式参考</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2439.html" target="_blank" title="Swift属性参考">Swift属性参考</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2438.html" target="_blank" title="Swift声明参考">Swift声明参考</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2437.html" target="_blank" title="Swift语句参考">Swift语句参考</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2436.html" target="_blank" title="Swift类型参考">Swift类型参考</a>
+				<span class="right">[06-19]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2264.html" target="_blank" title="关于Swift语言参考">关于Swift语言参考</a>
+				<span class="right">[06-18]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2266.html" target="_blank" title="使用Objective-C编写Swift类">使用Objective-C编写Swift类</a>
+				<span class="right">[06-18]</span>
+			</dd>
+
+		</dl>
+		<dl class="list right">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/ziliao/" target="_blank">资料下载</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2766.html" target="_blank" title="C-Free MSCL版下载">C-Free MSCL版下载</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2758.html" target="_blank" title="C语言获取随机数">C语言获取随机数</a>
+				<span class="right">[08-30]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2757.html" target="_blank" title="用C语言实现文本搜索，类似软件中常用的搜索功能">用C语言实现文本搜索，类似软件中常用的搜索功能</a>
+				<span class="right">[08-30]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2756.html" target="_blank" title="C语言猜拳游戏">C语言猜拳游戏</a>
+				<span class="right">[08-30]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2748.html" target="_blank" title="C语言动态分配数组大小">C语言动态分配数组大小</a>
+				<span class="right">[08-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2747.html" target="_blank" title="C语言定时关机小程序">C语言定时关机小程序</a>
+				<span class="right">[08-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2746.html" target="_blank" title="C语言带打字效果输出字符串">C语言带打字效果输出字符串</a>
+				<span class="right">[08-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2382.html" target="_blank" title="C-Free 5.0下载[带注册码][赠送破解版]">C-Free 5.0下载[带注册码][赠送破解版]</a>
+				<span class="right">[07-31]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2766.html" target="_blank" title="C-Free MSCL版下载">C-Free MSCL版下载</a>
+				<span class="right">[08-31]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2694.html" target="_blank" title="将两个循环单链表连接成一个循环链表">将两个循环单链表连接成一个循环链表</a>
+				<span class="right">[07-13]</span>
+			</dd>
+
+		</dl>
+
+		<dl class="list left">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/zhengze/" target="_blank">正则表达式</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1403.html" target="_blank" title="什么是正则表达式">什么是正则表达式</a>
+				<span class="right">[06-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1427.html" target="_blank" title="&lt;font color='#333333'&gt;正则表达式所有元字符及其使用方法一览表&lt;/font&gt;"><font color="#333333">正则表达式所有元字符及其使用方法一览表</font></a>
+				<span class="right">[04-28]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1440.html" target="_blank" title="常用正则表达式大全(匹配空格、替换等)">常用正则表达式大全(匹配空格、替换等)</a>
+				<span class="right">[04-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1430.html" target="_blank" title="正则表达式匹配汉字或中文">正则表达式匹配汉字或中文</a>
+				<span class="right">[04-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1439.html" target="_blank" title="正则表达式匹配HTML标签或标记">正则表达式匹配HTML标签或标记</a>
+				<span class="right">[04-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1429.html" target="_blank" title="PHP中使用正则表达式详解 preg_match() preg_replace() preg_mat">PHP中使用正则表达式详解 preg_match() preg_replace() preg_mat</a>
+				<span class="right">[04-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1438.html" target="_blank" title="正则表达式匹配字母 大写字母 小写字母 大小写字母 数字和字母组">正则表达式匹配字母 大写字母 小写字母 大小写字母 数字和字母组</a>
+				<span class="right">[04-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1437.html" target="_blank" title="正则表达式匹配IP地址">正则表达式匹配IP地址</a>
+				<span class="right">[04-23]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1433.html" target="_blank" title="正则表达式匹配用户密码">正则表达式匹配用户密码</a>
+				<span class="right">[04-23]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1420.html" target="_blank" title="正则表达式的其他规则">正则表达式的其他规则</a>
+				<span class="right">[04-22]</span>
+			</dd>
+
+		</dl>
+		<dl class="list right">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/mysql/" target="_blank">MySQL教程</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1458.html" target="_blank" title="Mysql命令mysqldump：备份数据库">Mysql命令mysqldump：备份数据库</a>
+				<span class="right">[05-04]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1457.html" target="_blank" title="Mysql命令rename：修改表名">Mysql命令rename：修改表名</a>
+				<span class="right">[05-04]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1455.html" target="_blank" title="Mysql命令update set：修改表中的数据">Mysql命令update set：修改表中的数据</a>
+				<span class="right">[05-04]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1441.html" target="_blank" title="Mysql命令mysql：连接Mysql数据库">Mysql命令mysql：连接Mysql数据库</a>
+				<span class="right">[05-04]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1453.html" target="_blank" title="Mysql命令select from：查询表中的数据（记录）">Mysql命令select from：查询表中的数据（记录）</a>
+				<span class="right">[05-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1452.html" target="_blank" title="Mysql命令insert into：向表中插入数据（记录）">Mysql命令insert into：向表中插入数据（记录）</a>
+				<span class="right">[05-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1454.html" target="_blank" title="Mysql命令delete from：删除记录">Mysql命令delete from：删除记录</a>
+				<span class="right">[05-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1451.html" target="_blank" title="Mysql命令drop table：删除数据表">Mysql命令drop table：删除数据表</a>
+				<span class="right">[05-02]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1449.html" target="_blank" title="Mysql命令create table：创建数据表">Mysql命令create table：创建数据表</a>
+				<span class="right">[05-02]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1453.html" target="_blank" title="Mysql命令select from：查询表中的数据（记录）">Mysql命令select from：查询表中的数据（记录）</a>
+				<span class="right">[05-02]</span>
+			</dd>
+
+		</dl>
+
+		<dl class="list left">
+			<dt><a href="http://see.xidian.edu.cn/cpp/shell/" target="_blank">Shell教程</a></dt>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/6999.html">Shell变量</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7000.html">Shell注释</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7001.html">Shell字符串</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7002.html">Shell数组</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7004.html">Shell test命令</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7006.html">Shell case语句</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7007.html">Shell for循环</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7008.html">Shell while循环</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7011.html">Shell函数</a></dd>
+			<dd><a target="_blank" href="http://see.xidian.edu.cn/cpp/view/7012.html">Shell函数参数</a></dd>
+		</dl>
+		<dl class="list right">
+			<dt><a href="http://see.xidian.edu.cn/cpp/danpianji/" target="_blank">单片机</a></dt>
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2472.html" target="_blank" title="第20章 常用单片机开发工具">第20章 常用单片机开发工具</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2471.html" target="_blank" title="第19章 实践项目开发--多功能电子钟">第19章 实践项目开发--多功能电子钟</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2470.html" target="_blank" title="第18章 RS485通信与Modbus协议">第18章 RS485通信与Modbus协议</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2469.html" target="_blank" title="第17章 模数转换与数模转换">第17章 模数转换与数模转换</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2468.html" target="_blank" title="第16章 红外通信与DS18B20传感器">第16章 红外通信与DS18B20传感器</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2467.html" target="_blank" title="第15章 实时时钟DS1302">第15章 实时时钟DS1302</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2466.html" target="_blank" title="第14章 I2C总线与EEPROM">第14章 I2C总线与EEPROM</a>
+				<span class="right">[06-19]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/2465.html" target="_blank" title="第13章 1602液晶与串口的应用实例">第13章 1602液晶与串口的应用实例</a>
+				<span class="right">[06-19]</span>
+			</dd>
+
+			<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1961.html" target="_blank" title="PCF8591硬件接口(电路图引脚图)">PCF8591硬件接口(电路图引脚图)</a>
+				<span class="right">[04-04]</span>
+			</dd>
+<dd class="clearfix">
+				<a class="left" href="http://see.xidian.edu.cn/cpp/html/1928.html" target="_blank" title="C语言字符数组和字符指针">C语言字符数组和字符指针</a>
+				<span class="right">[03-18]</span>
+			</dd>
+
+		</dl>
+	</div>
+	<div id="part-right" class="right">
+		<dl class="list">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/hanshu/" target="_blank">C语言函数手册</a></dt>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs1/" target="_blank">一、字符检测函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs2/" target="_blank">二、字符串操作函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs3/" target="_blank">三、内存管理函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs4/" target="_blank">四、日期时间函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs5/" target="_blank">五、数学函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs6/" target="_blank">六、文件操作函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs7/" target="_blank">七、进程操作函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs8/" target="_blank">八、文件权限控制函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs9/" target="_blank">九、信号处理函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs10/" target="_blank">十、接口处理函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs11/" target="_blank">十一、环境变量函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/hs12/" target="_blank">十二、终端控制函数</a></dd>
+			
+		</dl>
+
+		<!-- <div class="ad-google" style="margin-bottom:15px;">
+			<script type="text/javascript">google_ad_client = "ca-pub-1879607319104103";
+			/* C语言—250_250 */
+			google_ad_slot = "9494111365";
+			google_ad_width = 250;
+			google_ad_height = 250;
+			//
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div> -->
+
+		<dl class="list">
+			<dt><a href="http://see.xidian.edu.cn/cpp/u/zhuanti/" target="_blank">专题讨论</a></dt>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/zhuanti1/" target="_blank">指针深入探讨</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/zhuanti11/" target="_blank">C语言函数</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/zifuchuan/" target="_blank">字符串处理</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/bianyi/" target="_blank">编译预处理</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/wenjian/" target="_blank">数据文件</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/chazhao/" target="_blank">排序与查找</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/shuji/" target="_blank">推荐书籍</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/yunsuanfu/" target="_blank">运算符专题</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/xuanze/" target="_blank">选择结构</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/xunhuan/" target="_blank">循环结构</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/bianliang/" target="_blank">C语言变量</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/api/" target="_blank">C语言 API</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/guifan/" target="_blank">编程规范</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/vc60/" target="_blank">VC6.0教程</a></dd>
+			
+			<dd><a href="http://see.xidian.edu.cn/cpp/u/zhuanti12/" target="_blank">数组</a></dd>
+			
+		</dl>
+
+		<dl class="list">
+			<dt><a href="http://see.xidian.edu.cn/cpp/jingyan/" target="_blank">经验技巧</a></dt>
+			<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/2647.html" target="_blank" title="采用微内核结构设计和">采用微内核结构设计和</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/2646.html" target="_blank" title="用户态到和核心态的转">用户态到和核心态的转</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/2645.html" target="_blank" title="为什么说直到出现中断">为什么说直到出现中断</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/23.html" target="_blank" title="C语言变量赋初值">C语言变量赋初值</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/2536.html" target="_blank" title="安全起见，小心使用C">安全起见，小心使用C</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/4.html" target="_blank" title="C语言的特点">C语言的特点</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/11.html" target="_blank" title="C语言字符集">C语言字符集</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/1714.html" target="_blank" title="如何编写C语言程序使">如何编写C语言程序使</a></dd>
+
+			<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/688.html" target="_blank" title="C语言中break和contin">C语言中break和contin</a></dd>
+<dd><a class="left" href="http://see.xidian.edu.cn/cpp/html/705.html" target="_blank" title="c语言性能优化—以空">c语言性能优化—以空</a></dd>
+
+		</dl>
+		<dl class="list">
+			<dt>友情链接</dt>
+			<dd><a href="http://see.xidian.edu.cn/" target="_blank">电子工程学院</a> </dd><dd><a href="http://web.xidian.edu.cn/" target="_blank">教师个人主页</a> </dd><dd><a href="http://www.xidian.cc/" target="_blank">西电导航</a> </dd><dd><a href="http://job.xidian.edu.cn/" target="_blank">西电就业信息网</a> </dd>
+		</dl>
+	</div>
+</div>
+<script text="text/javascript">
+var shareParam = {};
+shareParam.desc = '各位土豪，推荐给大家一个不错的学习C语言的网站，教程很详细，有代码高亮，有函数手册，还有老师免费回答问题，nice，点赞！';
+shareParam.summary_qzone = 'C语言中文网是国内最专业的C语言在线学习平台，包含入门教程、进阶教程、函数手册、专题讲解等栏目，有老师免费回答问题。';
+shareParam.summary_douban = 'C语言中文网是国内最专业的C语言在线学习平台，包含入门教程、进阶教程、函数手册、专题讲解等栏目，如果您在学习中遇到问题，会有专门的教师帮您答疑解惑！。';
+shareParam.title = 'C语言中文网：C语言一站式学习平台！ ';
+shareParam.url = 'http://see.xidian.edu.cn/cpp/';
+shareParam.pic_qzone = 'http://see.xidian.edu.cn/cpp/uploads/shareimg/c_qzone.jpg';
+shareParam.pic_tweibo = 'http://see.xidian.edu.cn/cpp/uploads/shareimg/c_tweibo.jpg';
+shareParam.pic_douban = 'http://see.xidian.edu.cn/cpp/uploads/shareimg/c_douban.jpg';
+</script>
+<div id="footer-wrap" class="clearfix">
+    <div id="footer" class="clearfix">
+        <div class="left" style="_width: 600px;">
+            <ul id="nav-bottom" class="clearfix">
+                <li>
+                    <a href="http://see.xidian.edu.cn/cpp/html/1013.html" target="_blank" rel="nofollow">关于我们</a>
+                    <span class="blank">|</span>
+                </li>
+                <li>
+                    <a href="http://see.xidian.edu.cn/cpp/html/1014.html" target="_blank" rel="nofollow">联系我们</a>
+                    <span class="blank">|</span>
+                </li>
+                <li>
+                    <a href="http://see.xidian.edu.cn/cpp/html/1015.html" target="_blank" rel="nofollow">版权声明</a>
+                    <span class="blank">|</span>
+                </li>
+                <li>
+                    <a href="http://see.xidian.edu.cn/cpp/html/1524.html" target="_blank" rel="nofollow">文章评论注意事项</a>
+                    <span class="blank">|</span>
+                </li>
+                <li>
+                    <a href="http://see.xidian.edu.cn/cpp/html/1969.html" target="_blank" rel="nofollow">向我们投稿</a>
+                </li>
+            </ul>
+            <p>
+                精美而实用的网站，关注编程技术，追求极致，让您轻松愉快的学习。<br>
+                Copyright &#169;2011-2015 see.xidian.edu.cn, All Rights Reserved
+            </p>
+        </div>
+        <img id="logo-bottom" class="right" src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/logo_bottom.jpg" alt="底部Logo">
+    </div>
+</div>
+<script type="text/javascript">
+	var cmsPath = '/cpp', // CMS安装目录，不带 /
+		cmsTemplets = '/cpp/templets/default', // 模板目录，不带 /
+        cmsTempletsVer = 3.13;  // 版本号
+</script>
+<script src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/jquery.js" type="text/javascript"></script>
+<script src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/common.js" type="text/javascript"></script>
+<span id="cnzz-wrap">
+    <script type="text/javascript">
+        var cnzz = {};
+
+        cnzz.positionHref = $("#position").children('a')[1];
+        cnzz.positionHref && ( cnzz.positionHref = cnzz.positionHref.getAttribute('href') );
+        cnzz.protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        cnzz.webName = 'c';
+
+        cnzz.webIdObj = {
+            'c': '3875484',
+            'cpp': '4153548',
+            'swift': '5937701',
+            'shell': '5809059',
+            'danpianji': '5867261'
+        };
+
+        if(cnzz.positionHref) if( /^\/cpp\/biancheng/.test(cnzz.positionHref) ){
+            cnzz.webName = 'cpp';
+        }else if( /^\/cpp\/swift/.test(cnzz.positionHref) ){
+            cnzz.webName = 'swift';
+        }else if( /^\/cpp\/shell/.test(cnzz.positionHref) ){
+            cnzz.webName = 'shell';
+        }else if( /^\/cpp\/danpianji/.test(cnzz.positionHref) ){
+            cnzz.webName = 'danpianji';
+        }
+
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_"+ cnzz.webIdObj[cnzz.webName] +"'%3E%3C/span%3E%3Cscript src='" + cnzz.protocol + "s6.cnzz.com/stat.php%3Fid%3D"+ cnzz.webIdObj[cnzz.webName] +"' type='text/javascript'%3E%3C/script%3E"));
+    </script><span id="cnzz_stat_icon_3875484"><a href="http://www.cnzz.com/stat/website.php?web_id=3875484" target="_blank" title="站长统计">站长统计</a></span><script src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/stat.php" type="text/javascript"></script><script src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/core.php" charset="utf-8" type="text/javascript"></script>
+</span>
+<script src="C%E8%AF%AD%E8%A8%80%E4%B8%AD%E6%96%87%E7%BD%91%EF%BC%9Ac%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E9%97%A8%E6%88%B7%E7%BD%91%E7%AB%99%28%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E3%80%81%E7%BC%96%E7%A8%8B%E8%BD%AF%E4%BB%B6%29_files/index.js" type="text/javascript"></script>
+
+</body></html>

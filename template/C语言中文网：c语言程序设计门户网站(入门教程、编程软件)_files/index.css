@@ -1,0 +1,420 @@
+/*---------------重设CSS样式--------------------*/
+html{min-height:100%; width: 100%;}
+body{margin:0px;padding:0px;min-height:100%;width: 100%;font:14px "Microsoft Yahei",Arial,Helvetica,sans-serif;color:#333;background-color: #f6f6f6;/* #EDEFF0; */}
+h1,h2,h3,h4,h5,h6,p,dl,ol,ul,pre{margin-top:0px;margin-bottom:0px;}
+ul,ol,dd{list-style:none;margin-left:0px;padding-left:0px;}
+input{outline:none;}
+a,img{border:none;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.hover-none:hover,.hover-none a:hover{text-decoration:none;}
+
+/*----------------杂项-------------------*/
+.left{display:block;float:left;_white-space:nowrap;}
+.right{display:block;float:right;_white-space:nowrap;}
+.clearfix { *zoom:1; }
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+
+.col-red{color: #D33428;}
+.col-link{color: #08C;}
+.font-weight{font-weight: bold;}
+.bg-f7f7f7{background-color: #f4f4f4 !important;}
+
+/* tab公共样式 */
+.tab{
+	overflow: hidden;
+	background-color: #fff;
+}
+.tab .title-list li{
+	float: left;
+}
+.tab .cont-list li{
+	display: none;
+}
+.tab .cont-list li ul li{
+	display: block;
+}
+.tab .cont-list li.this{
+	display: block;
+}
+
+/* 文章列表公共样式 */
+dl.list{
+	background-color: #fff;
+}
+dl.list dt{
+	height: 38px;
+	padding-left: 10px;
+	line-height: 38px;
+	color: #666;
+	font-weight: bold;
+	border-bottom: 1px solid #dbdbdb;
+	background: url('../images/index_list_bg.png') 0px -5px repeat-x;
+}
+dl.list dd{
+	height: 30px;
+	line-height: 30px;
+}
+
+/*----------------头部样式-------------------*/
+#topbar-wrap{
+	height: 40px;
+	background-color: #464849;
+}
+#nav-top{
+	margin-left: 30px;
+	_margin-left: 15px;
+}
+#nav-top li{
+	float: left;
+	_white-space:nowrap;
+}
+#nav-top li a{
+	display: block;
+	_float: left;
+	padding: 0px 12px;
+	height: 40px;
+	line-height: 40px;
+	color: #ddd;
+	_white-space:nowrap;
+}
+#nav-top li a.col-red{
+	color: #D33428;
+}
+#nav-top li a.col-green{
+	color: #E7A44F;
+}
+#nav-top li a.this{
+	color: #D33428;
+	background-color: #333;
+}
+#nav-top li a:hover{
+	color: #D33428;
+	background-color: #333;
+}
+#nav-top li a.col-green:hover{
+	color: #E7A44F;
+	background-color: #333;
+}
+#interact-link{
+	margin-right: 30px;
+	_margin-right: 15px;
+}
+#interact-link li{
+	float: right;
+	_white-space:nowrap;
+}
+#interact-link li a{
+	display: block;
+	_float: right;
+	padding: 0px 12px;
+	height: 40px;
+	line-height: 40px;
+	color: #ddd;
+	_white-space:nowrap;
+}
+#interact-link li.weibo a{
+	padding-left: 24px;
+	background: url('../images/icons.png') 0px -799px no-repeat;
+	_background: url('../images/icons.gif') 0px -799px no-repeat;
+}
+
+
+#header_wrap{
+	position: relative;
+	height: 70px;
+	width: 100%;
+	background: #fff;
+}
+#header{
+	margin: auto;
+	height: 70px;
+	width: 1040px;
+}
+#header a{
+	text-decoration: none;
+}
+#logo{
+	margin-top: 15px;
+}
+#nav-main{
+	margin-left: 30px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 15px;
+}
+#nav-main li{
+	float: left;
+	height:70px;
+	margin-right: 18px;
+}
+#nav-main li a{
+	color: #444;
+}
+#nav-main li a.col-red{
+	color: #D33428;
+}
+#nav-main li.sub-menu{
+	position: relative;
+	cursor: pointer;
+}
+#nav-main li.sub-menu .icon{
+	background: url('../images/icons.png') 3px -696px no-repeat;
+	_background: url('../images/icons.gif') 3px -696px no-repeat;
+}
+#nav-main li.sub-menu:hover .icon{
+	background: url('../images/icons.png') 3px -747px no-repeat;
+	_background: url('../images/icons.gif') 3px -747px no-repeat;
+}
+#nav-main li.sub-menu ul{
+	position: absolute;
+	display: none;
+	top:50px;
+	left: 0px;
+	border: 1px solid #e5e5e5;
+	border-bottom: 0px;
+	background-color: #f6f6f6;
+	z-index: 1001;
+}
+#nav-main li.sub-menu ul li{
+	float: none;
+	height: 32px;
+	margin-right: 0px;
+	padding: 0px 10px;
+	line-height: 32px;
+	white-space: nowrap;
+	border-bottom: 1px solid #e5e5e5;
+}
+#nav-main li.sub-menu ul li:hover{
+	background-color: #e5e5e5;
+}
+#nav-main li.sub-menu ul li a{
+	display: block;
+}
+
+/*----------------div#main样式----------------*/
+#main{
+	position: relative;
+	width: 1040px;
+	margin: 25px auto 30px auto;
+}
+#main a{
+	color: #333;
+}
+
+/*----------------上部样式----------------*/
+#part-top{
+	border-bottom: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+	background-color: #fff;
+}
+/* 热门软件 */
+dl.host-software{
+	width:298px;
+	padding-bottom: 3px;
+	border: 1px solid #dbdbdb;
+	border-bottom: 0px;
+}
+dl.host-software dd{
+	padding: 10px 10px 2px 10px;
+	line-height: 20px;
+	height: 50px;
+}
+dl.host-software dd .icon{
+	width: 50px;
+	height: 50px;
+}
+dl.host-software dd .icon img{
+	width: 50px;
+	height: 50px;
+}
+dl.host-software dd .info{
+	margin-left: 8px;
+	padding-top: 5px;
+	line-height: 20px;
+	color: #777;
+}
+dl.host-software dd .info a{
+	color: #444;
+}
+dl.host-software dd .info span{
+	font-size: 13px;
+}
+dl.host-software dd .time{
+	line-height: 50px;
+	color: #777;
+	font-size: 13px;
+}
+
+/* 推荐文章 TOP20 */
+#part-top .arc-list{
+	width: 439px;
+	border-top: 1px solid #dbdbdb;
+	background: url('../images/icon_arclist.png') 8px 52px no-repeat #fff;
+} 
+#part-top .arc-list dt{
+	margin-bottom: 5px;
+}
+#part-top .arc-list dd{
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px 0px 27px;
+	overflow: hidden;
+}
+#part-top .arc-list dd a{
+	max-width: 355px;
+	_width: 355px;
+	overflow: hidden;
+}
+
+/* 最近更新，随机文章 */
+#part-top .tab{
+	width: 298px;
+	padding-bottom: 6px;
+	border-left: 1px solid #dbdbdb;
+}
+#part-top .tab .title-list{
+	margin-bottom: 5px;
+	height: 38px;
+	border-bottom: 1px solid #dbdbdb;
+	overflow: visible;
+	_overflow: hidden;  /* Fuck IE6 -> 父元素设置 overflow:visible 会被撑开 */
+}
+#part-top .tab .title-list li{
+	_position: relative;  /* Fuck IE6 -> 父元素设置 overflow:visible 会被撑开 */
+	height: 38px;
+	padding: 0px 12px;
+	line-height: 37px;
+	cursor: pointer;
+}
+#part-top .tab .title-list li.this{
+	border-bottom: 1px solid #D33428;
+	color: #D33428;
+}
+#part-top .tab .cont-list li ul li{
+	height: 30px;
+	padding: 0px 10px 0px 20px;
+	line-height: 30px;
+	background: url('../images/icons.png') 10px -386px no-repeat;
+	_background: url('../images/icons.gif') 10px -386px no-repeat;
+	overflow: hidden;
+}
+#part-top .tab .cont-list li ul li a{
+	_display: block;
+	_width: 260px;
+	_overflow: hidden;
+}
+
+/*----------------左部样式----------------*/
+#part-left{
+	margin-top: 15px;
+	width: 772px;
+}
+
+/* 入门教程目录 */
+table.course-contents{
+	margin-bottom: 16px;
+	width: 770px;
+	border-collapse: collapse;
+	background-color: #fff;
+}
+table.course-contents caption{
+	height: 38px;
+	padding-left: 15px;
+	line-height: 38px;
+	border: 1px solid #dbdbdb;
+	border-bottom: 0px;
+	background: url('../images/index_list_bg.png') 0px -5px repeat-x;
+}
+table.course-contents caption a.title{
+	color: #D33428 !important;
+	font-weight: bold;
+}
+table.course-contents caption a.more{
+	height: 38px;
+	padding: 0px 16px;
+	border-left: 1px solid #dbdbdb;
+	background-color: #eee;
+}
+table.course-contents td{
+	padding: 6px 10px;
+	border: 1px solid #dbdbdb;
+}
+
+/* 文章列表 */
+#part-left dl.list{
+	margin-bottom: 15px;
+	width: 378px;
+	border: 1px solid #dbdbdb;
+	background-color: #fff;
+}
+#part-left dl.list dd{
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px 0px 20px;
+	background: url('../images/icons.png') 10px -386px no-repeat;
+	_background: url('../images/icons.gif') 10px -386px no-repeat;
+	overflow: hidden;
+}
+#part-left dl.list dd span{
+	color: #777;
+}
+#part-left dl.list dd a{
+	max-width: 280px;
+	_width: 280px;
+	overflow: hidden;
+}
+
+/*----------------右部样式----------------*/
+#part-right{
+	margin-top: 15px;
+	width: 250px;
+}
+#part-right dl.list{
+	margin-bottom: 15px;
+	border: 1px solid #dbdbdb;
+	background-color: #fff;
+}
+#part-right dl.list dd{
+	height: 32px;
+	line-height: 32px;
+	padding: 0px 10px;
+	border-bottom: 1px dashed #dbdbdb;
+}
+
+/*----------------尾部样式-------------------*/
+#footer-wrap{
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #eee;
+}
+#footer{
+    margin:auto auto 30px auto;
+    width:1029px;
+}
+#nav-bottom li{
+    float: left;
+}
+#nav-bottom li a{
+    color:#666;
+    font-weight:bold;
+}
+#nav-bottom li .blank{
+    padding: 0px 12px;
+    color: #999;
+    font-size: 12px;
+}
+#footer p{
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6em;
+}
+#logo-bottom{
+    margin-top: 15px;
+    _width: 300px;
+}
+#cnzz-wrap{
+	display: none;
+}
