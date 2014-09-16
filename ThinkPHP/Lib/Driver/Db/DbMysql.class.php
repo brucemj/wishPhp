@@ -193,7 +193,7 @@ class DbMysql extends Db{
      * @access private
      * @return array
      */
-    private function getAll() {
+    public function getAll() {
         //返回数据集
         $result = array();
         if($this->numRows >0) {

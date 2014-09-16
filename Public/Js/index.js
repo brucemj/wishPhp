@@ -72,6 +72,40 @@ $(function () {
 		var obj = $( 'textarea[name=content]' );
 		obj.val(obj.val() + phiz);
 	} );
+	
+	$("span[id=send-btn]").click( function(){
+		var username = $("input[id=username]");
+		var content = $("textarea[id=content]");
+		if ( username.val() == ''){
+			alert('用户名不能为空');
+			username.focus();
+			return;
+		}
+		if (content.val() == ''){
+			alert('内容不能为空');
+			content.focus();
+			return;
+		}
+		$.post(handleUrl,{username: username.val() , content: content.val()},
+				function(data){
+					if( data.status ){
+						var str= "<dl class='paper a3'><dt>";
+						str+="<span class='username'>" + data.username + "</span>";
+						str+="<span class='num'>No."+ data.id +"</span></dt>";
+						str+="<dd class='content'>" + data.content + "</dd>";
+						str+="<dd class='bottom'><span class='time'>" + data.time +"</span>";
+						str+="<a href='' class='close'></a></dd></dl>";
+					
+						$("div[id=main]").append(str);
+					} else{
+						alert('发布失败');
+					}
+				},
+				'json');
+		
+		
+		$("#close").click();
+	});
 
 });
 

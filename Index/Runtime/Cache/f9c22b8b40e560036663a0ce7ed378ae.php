@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>HouDun许愿墙</title>
 	<link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
+	<script type="text/javascript">var handleUrl = '<?php echo U("handle",'' ,'');?>';</script>
 	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
 	<script type="text/javascript" src='__PUBLIC__/Js/index.js'></script>
 </head>
@@ -12,61 +13,17 @@
 		<span id='send'></span>
 	</div>
 	<div id='main'>
-		<dl class='paper a1'>
-			<dt>
-				<span class='username'>后盾网</span>
-				<span class='num'>No.00001</span>
-			</dt>
-			<dd class='content'>大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成</dd>
-			<dd class='bottom'>
-				<span class='time'>今天08:30</span>
-				<a href="" class='close'></a>
-			</dd>
-		</dl>
-		<dl class='paper a2'>
-			<dt>
-				<span class='username'>后盾网</span>
-				<span class='num'>No.00001</span>
-			</dt>
-			<dd class='content'>大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成</dd>
-			<dd class='bottom'>
-				<span class='time'>今天08:30</span>
-				<a href="" class='close'></a>
-			</dd>
-		</dl>
-		<dl class='paper a3'>
-			<dt>
-				<span class='username'>后盾网</span>
-				<span class='num'>No.00001</span>
-			</dt>
-			<dd class='content'>大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成</dd>
-			<dd class='bottom'>
-				<span class='time'>今天08:30</span>
-				<a href="" class='close'></a>
-			</dd>
-		</dl>
-		<dl class='paper a4'>
-			<dt>
-				<span class='username'>后盾网</span>
-				<span class='num'>No.00001</span>
-			</dt>
-			<dd class='content'>大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成</dd>
-			<dd class='bottom'>
-				<span class='time'>今天08:30</span>
-				<a href="" class='close'></a>
-			</dd>
-		</dl>
-		<dl class='paper a5'>
-			<dt>
-				<span class='username'>后盾网</span>
-				<span class='num'>No.00001</span>
-			</dt>
-			<dd class='content'>大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成</dd>
-			<dd class='bottom'>
-				<span class='time'>今天08:30</span>
-				<a href="" class='close'></a>
-			</dd>
-		</dl>
+		<?php if(is_array($wish)): foreach($wish as $key=>$d): ?><dl class='paper a<?php echo mt_rand(1,5);?>'>
+				<dt>
+					<span class='username'><?php echo ($d["username"]); ?></span>
+					<span class='num'>No.<?php echo ($d["id"]); ?></span>
+				</dt>
+				<dd class='content'><?php echo ($d["content"]); ?></dd>
+				<dd class='bottom'>
+					<span class='time'><?php echo ($d["time"]); ?></span>
+					<a href="" class='close'></a>
+				</dd>
+			</dl><?php endforeach; endif; ?>
 	</div>
 
 	<div id='send-form'>

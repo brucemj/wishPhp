@@ -187,7 +187,7 @@ class DbMysqli extends Db{
      * @param string $sql  sql语句
      * @return array
      */
-    private function getAll() {
+    public function getAll() {
         //返回数据集
         $result = array();
         if($this->numRows>0) {

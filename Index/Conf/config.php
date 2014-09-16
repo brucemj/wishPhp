@@ -10,5 +10,16 @@ return array(
 		'__URL__'       =>  __URL__,
 		'../Public'     =>  APP_TMPL_PATH.'Public',// 项目公共模板目录
 		'__PUBLIC__'    =>  __ROOT__.'/Public',// 站点公共目录
+		'TMPL_TEMPLATE_SUFFIX' => '.html',
+		'URL_HTML_SUFFIX' => 'html',
+		
+		//数据库配置
+		'DB_TYPE' => 'mysql',
+		'DB_HOST' => '172.21.12.58',
+		'DB_NAME' => 'wish',
+		'DB_USER' => 'root',
+		'DB_PWD' => 'root',
+		'DB_PREFIX' => '',
+		'DB_PORT' => 3306
 );
 ?>
