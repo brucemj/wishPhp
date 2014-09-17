@@ -2,7 +2,7 @@
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends Action {
     public function index(){
-    	$wish = M('meg')->select();
+    	$wish = M('msg')->select();
     	$this->assign('wish', $wish)->display();
     }
     
@@ -15,7 +15,7 @@ class IndexAction extends Action {
     			'content' => I('post.content'),
     			'time' => time()
     			);
-    	if ( $id = M('meg')->data($data)->add() ){
+    	if ( $id = M('msg')->data($data)->add() ){
     		$data['time'] = date('y-m-d H:i', $data['time']);
     		$data['id'] = $id;
     		$data['status'] = 1;
