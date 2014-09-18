@@ -6,12 +6,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<hr>
-	<table>
-		<tr>  <th>ID</th> <th>用户名</th> <th>内容</th> <th>发布时间</th>		</tr>
-		
+<!-- 	<hr> -->
+	
+	<table class='table'>
+		<tr>  <th>ID</th> <th>用户名</th> <th>内容</th> <th>发布时间</th>	 <th>操作</th>	</tr>		
+		<foreach name='wish' item='v'>
+			<tr>
+				<td>{$v.id}</td>
+				<td>{$v.username}</td>
+				<td>{$v.content}</td>
+				<td>{$v.time}</td>
+				<td><a href={:U('Admin/MsgManage/delete',array(id => $v['id']), '')}>删除</a></td>
+			</tr>
+		</foreach>
+		<tr> <td colspan=5 align='center' > {$page} </td> </tr>
 	</table>
 	
-	<hr>
+<!-- 	<hr> -->
 </body>
 </html>
